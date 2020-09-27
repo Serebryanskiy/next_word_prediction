@@ -1,7 +1,7 @@
-import flask
+# import flask
 from flask import Flask, request, render_template
 import json
-import main
+import .main
 
 app = Flask(__name__)
 
@@ -39,4 +39,4 @@ def get_prediction_mask():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=8000, use_reloader=False)
+    app.run(host='0.0.0.0', debug=True, port=5000, use_reloader=True)
