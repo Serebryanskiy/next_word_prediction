@@ -1,4 +1,5 @@
 # Next word prediction
+
 Simple application using transformers models to predict next word or a masked word in a sentence.
 
 The purpose is to demo and compare the main models available up to date.
@@ -13,12 +14,9 @@ The second variant is necessary to include a <mask> token where you want the mod
 
 ![Word prediction](word_prediction.gif)
 
-### Running 
-
-```
-cd web-app
-python app.py
-```
+## Execute the following commands to run the project:
+- `cd /path/to/root/directory`
+- `docker-compose up`
 
 Open your browser http://localhost:8000
 
