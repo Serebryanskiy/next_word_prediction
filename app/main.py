@@ -41,7 +41,7 @@ def decode(tokenizer, pred_idx, top_clean):
 
 def encode(tokenizer, text_sentence, add_special_tokens=True):
     text_sentence = text_sentence.replace('<mask>', tokenizer.mask_token)
-    # if <mask> is the last token, append a "." so that models dont predict punctuation.
+    # if <mask> is the last token, append a "." so that models don't predict punctuation.
     if tokenizer.mask_token == text_sentence.split()[-1]:
         text_sentence += ' .'
 

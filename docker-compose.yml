@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  webapp:
+    #flask
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - ./torch-cache/:/root/.cache/
+    working_dir: /app
+    ports:
+      - 80:5000
+    # entrypoint: ["/bin/bash", "-c"]
+    command: gunicorn --reload wsgi:app --log-level=debug -b 0.0.0.0:5000 --threads 4 -w 4 --timeout=500
